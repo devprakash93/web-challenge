@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Aesthetic Dark Theme with Gradient Background */
+    --background: 240 10% 12%;
+    --foreground: 40 20% 96%;
+
+    --card: 0 0% 12%;
+    --card-foreground: 40 20% 96%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 40 20% 96%;
+
+    /* Gold Gradient Primary */
+    --primary: 43 74% 66%;
+    --primary-foreground: 0 0% 10%;
+    
+    /* Rose Blush Secondary */
+    --secondary: 345 75% 85%;
+    --secondary-foreground: 0 0% 10%;
+
+    /* Muted Dark Grays */
+    --muted: 0 0% 18%;
+    --muted-foreground: 40 10% 70%;
+
+    /* Gold Accent */
+    --accent: 43 74% 66%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 43 74% 66%;
+
+    --radius: 0.75rem;
+    
+    /* Custom Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(43 74% 66%), hsl(38 90% 55%));
+    --gradient-rose: linear-gradient(135deg, hsl(345 75% 85%), hsl(350 80% 75%));
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 8%), hsl(0 0% 12%));
+    
+    /* Shadows */
+    --shadow-gold: 0 10px 40px -10px hsl(43 74% 66% / 0.3);
+    --shadow-elegant: 0 20px 60px -15px hsl(0 0% 0% / 0.5);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background: linear-gradient(135deg, hsl(240 10% 12%) 0%, hsl(260 15% 8%) 50%, hsl(240 10% 12%) 100%);
+    background-attachment: fixed;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
